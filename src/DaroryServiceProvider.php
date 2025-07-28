@@ -47,6 +47,7 @@ class DaroryServiceProvider extends ServiceProvider
             __DIR__ . '/../resources/views/elements' => resource_path('views/elements'),
             __DIR__ . '/../resources/views/layouts' => resource_path('views/layouts'),
             __DIR__ . '/../resources/views/livewire' => resource_path('views/livewire'),
+            //livewire class to view
         ], 'darory-views');
 
         $this->publishes([
@@ -56,6 +57,10 @@ class DaroryServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../public/phoenix' => public_path('phoenix'),
         ], 'darory-public');
+
+        $this->publishes([
+            __DIR__ . '/../app/livewire' => app_path('livewire'),
+        ], 'darory-livewire-classes');
 
 
         // $this->publishes([
