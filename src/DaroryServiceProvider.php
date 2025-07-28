@@ -44,6 +44,9 @@ class DaroryServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../resources/views/components' => resource_path('views/components'),
             __DIR__ . '/../resources/views/vendor/pagination' => resource_path('views/vendor/pagination'),
+            __DIR__ . '/../resources/views/elements' => resource_path('views/elements'),
+            __DIR__ . '/../resources/views/layouts' => resource_path('views/layouts'),
+            __DIR__ . '/../resources/views/livewire' => resource_path('views/livewire'),
         ], 'darory-views');
 
         $this->publishes([
