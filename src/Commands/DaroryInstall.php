@@ -16,7 +16,9 @@ class DaroryInstall extends Command
 
         $this->callSilent('vendor:publish', ['--tag' => 'darory-views', '--force' => true]);
         $this->callSilent('vendor:publish', ['--tag' => 'darory-components', '--force' => true]);
-        $this->callSilent('vendor:publish', ['--tag' => 'darory-stubs', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'darory-public', '--force' => true]);
+
+        // $this->callSilent('vendor:publish', ['--tag' => 'darory-stubs', '--force' => true]);
 
         $this->info('Installing intervention/image...');
         exec('composer require intervention/image');

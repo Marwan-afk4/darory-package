@@ -39,20 +39,25 @@ class DaroryServiceProvider extends ServiceProvider
             ]);
         }
 
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'darory');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'darory');
 
         $this->publishes([
-            __DIR__.'/../resources/views/components' => resource_path('views/components'),
-            __DIR__.'/../resources/views/vendor/pagination' => resource_path('views/vendor/pagination'),
+            __DIR__ . '/../resources/views/components' => resource_path('views/components'),
+            __DIR__ . '/../resources/views/vendor/pagination' => resource_path('views/vendor/pagination'),
         ], 'darory-views');
 
         $this->publishes([
-            __DIR__.'/Components' => app_path('View/Components'),
+            __DIR__ . '/Components' => app_path('View/Components'),
         ], 'darory-components');
 
         $this->publishes([
-            __DIR__.'/stubs' => base_path('stubs'),
-        ], 'darory-stubs');
+            __DIR__ . '/../public/phoenix' => public_path('phoenix'),
+        ], 'darory-public');
+
+
+        // $this->publishes([
+        //     __DIR__.'/stubs' => base_path('stubs'),
+        // ], 'darory-stubs');
     }
 
     public function register()
