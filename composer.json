@@ -1,0 +1,23 @@
+{
+  "name": "darory/tools",
+  "description": "Darory reusable Laravel developer tools",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Darory\\Tools\\": "src/"
+    }
+  },
+  "require": {
+    "intervention/image": "^3.11"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Darory\\Tools\\DaroryServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
