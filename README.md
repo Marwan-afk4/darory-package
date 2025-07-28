@@ -10,7 +10,7 @@ To install this package via Composer, first add the following to your `composer.
     }
 ]
 
-To install this package via Composer, first add the following to your `auth.json` file:
+second step add the following to your `auth.json` file:
 
 ```json
 {
