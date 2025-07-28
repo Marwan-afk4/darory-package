@@ -13,10 +13,11 @@
                 {{ $attribute }}="{{ $v }}"
             @endif
         @endforeach
-    >{{ old($name, $value) }}</textarea>
+    ></textarea>
+
     <label for="{{ $name }}">{{ $label }}</label>
 
     @error($name)
-        <span class="invalid-feedback">{{ $message }}</span>
+        <span class="text-danger">{{ $message }}</span>
     @enderror
 </div>

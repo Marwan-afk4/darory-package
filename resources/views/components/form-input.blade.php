@@ -1,11 +1,11 @@
-<div class="form-floating mb-3 {{ $required ? 'required' : '' }}">
+<div class="{{ $divClass }} {{ $required ? 'required' : '' }}">
     <input 
         type="{{ $type }}" 
-        name="{{ $name }}" 
+        name="{{ $name }}"
+        value="{{ old(str_replace(['[', ']'], ['.', ''], $name), $value) }}"
         id="{{ $name }}"
         placeholder="{{ $label }}"
-        class="form-control @error($name) is-invalid @enderror" 
-        value="{{ old($name, $value) }}" 
+        class="{{ $class }} @error($name) is-invalid @enderror" 
         {{ $required ? 'required' : '' }}
         {{ $disabled ? 'disabled' : '' }}
         @foreach($attrs ?? [] as $attribute => $v)
@@ -17,8 +17,8 @@
         @endforeach
     >
     <label for="{{ $name }}">{{ $label }}</label>
-    
-    @error($name)
-        <span class="invalid-feedback">{{ $message }}</span>
+
+    @error(str_replace(['[', ']'], ['.', ''], $name))
+        <span class="text-danger">{{ $message }}</span>
     @enderror
 </div>
