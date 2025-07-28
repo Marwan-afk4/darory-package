@@ -9,6 +9,7 @@ To install this package via Composer, first add the following to your `composer.
         "url": "https://github.com/Marwan-afk4/darory-package.git"
     }
 ]
+```
 
 second step add the following to your `auth.json` file:
 
