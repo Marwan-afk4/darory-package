@@ -144,7 +144,7 @@ private function getTypeFromRules(array $rules)
 
 private function generateFlutterModel($modelName, $attributes, $nullableFields, $relatedModels)
 {
-    $stub = File::get(app_path('/Console/Commands/stubs/flutter_model.stub'));
+    $stub = File::get(abase_path('vendor/darory/tools/src/stubs/flutter_model.stub'));
 
     // Flutter class name (same as Laravel model name)
     $className = Str::studly($modelName);

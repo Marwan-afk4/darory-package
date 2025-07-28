@@ -140,7 +140,7 @@ class DaroryResources extends Command
         }
 
         // Load stub file
-        $stubPath = app_path('/Console/Commands/stubs/resource.stub');
+        $stubPath = base_path('vendor/darory/tools/src/stubs/resource.stub');
         if (!File::exists($stubPath)) {
             $this->error("Stub file not found: {$stubPath}");
             return;

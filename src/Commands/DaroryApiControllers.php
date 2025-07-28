@@ -112,7 +112,7 @@ class DaroryApiControllers extends Command
             return;
         }
 
-        $stubPath = app_path('Console/Commands/stubs/controller-api.stub');
+        $stubPath = base_path('vendor/darory/tools/src/stubs/controller-api.stub');
         if (!File::exists($stubPath)) {
             $this->error("❌ Stub file missing at: $stubPath");
             return;

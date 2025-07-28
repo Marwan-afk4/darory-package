@@ -126,7 +126,7 @@ class DaroryControllers extends Command
         //     return;
         // }
 
-        $stubPath = app_path('Console/Commands/stubs/controller.stub');
+        $stubPath = base_path('vendor/darory/tools/src/stubs/controller.stub');
         if (!File::exists($stubPath)) {
             $this->error("❌ Missing stub at: $stubPath");
             return;
