@@ -47,6 +47,7 @@ class DaroryServiceProvider extends ServiceProvider
             __DIR__ . '/../resources/views/elements' => resource_path('views/elements'),
             __DIR__ . '/../resources/views/layouts' => resource_path('views/layouts'),
             __DIR__ . '/../resources/views/livewire' => resource_path('views/livewire'),
+            __DIR__ . '/../resources/views/auth' => resource_path('views/auth'),
             //livewire class to view
         ], 'darory-views');
 
@@ -62,6 +63,33 @@ class DaroryServiceProvider extends ServiceProvider
             __DIR__ . '/../app/livewire' => app_path('livewire'),
         ], 'darory-livewire-classes');
 
+        $this->publishes([
+            __DIR__ . '/../app/Helper' => app_path('Helper'),
+        ], 'darory-helper-api-response');
+
+        $this->publishes([
+            __DIR__ . '/../app/Resources' => app_path('Resources'),
+        ], 'darory-user-resources');
+
+        $this->publishes([
+            __DIR__ . '/../app/Http/Requests' => app_path('Http/Requests'),
+        ], 'darory-requests');
+        
+        $this->publishes([
+            __DIR__ . '/../app/Http/Controllers' => app_path('Http/Controllers'),
+        ], 'darory-controllers');
+
+        //routes
+        $this->publishes([
+            __DIR__ . '/../routes/web.php' => base_path('routes/web.php'),
+        ], 'darory-routes');
+
+        //api
+        $this->publishes([
+            __DIR__ . '/../routes/api.php' => base_path('routes/api.php'),
+        ], 'darory-api-routes');
+
+        
 
         // $this->publishes([
         //     __DIR__.'/stubs' => base_path('stubs'),

@@ -18,6 +18,12 @@ class DaroryInstall extends Command
         $this->callSilent('vendor:publish', ['--tag' => 'darory-components', '--force' => true]);
         $this->callSilent('vendor:publish', ['--tag' => 'darory-public', '--force' => true]);
         $this->callSilent('vendor:publish', ['--tag' => 'darory-livewire-classes', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'darory-helper-api-response', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'darory-user-resources', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'darory-requests', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'darory-controllers', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'darory-routes', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'darory-api-routes', '--force' => true]);
 
         // $this->callSilent('vendor:publish', ['--tag' => 'darory-stubs', '--force' => true]);
 
