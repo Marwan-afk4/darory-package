@@ -68,7 +68,7 @@ class DaroryServiceProvider extends ServiceProvider
         ], 'darory-helper-api-response');
 
         $this->publishes([
-            __DIR__ . '/../app/Resources' => app_path('Resources'),
+            __DIR__ . '/../app/Http/Resources' => app_path('Http/Resources'),
         ], 'darory-user-resources');
 
         $this->publishes([
@@ -89,7 +89,7 @@ class DaroryServiceProvider extends ServiceProvider
             __DIR__ . '/../routes/api.php' => base_path('routes/api.php'),
         ], 'darory-api-routes');
 
-        
+
 
         // $this->publishes([
         //     __DIR__.'/stubs' => base_path('stubs'),
