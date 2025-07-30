@@ -89,6 +89,12 @@ class DaroryServiceProvider extends ServiceProvider
             __DIR__ . '/../routes/api.php' => base_path('routes/api.php'),
         ], 'darory-api-routes');
 
+        //add middleware
+         $this->publishes([
+            __DIR__ . '/../app/Http/Middleware' => app_path('Http/Middleware'),
+        ], 'darory-middleware');
+        
+
 
 
         // $this->publishes([

@@ -24,6 +24,7 @@ class DaroryInstall extends Command
         $this->callSilent('vendor:publish', ['--tag' => 'darory-controllers', '--force' => true]);
         $this->callSilent('vendor:publish', ['--tag' => 'darory-routes', '--force' => true]);
         $this->callSilent('vendor:publish', ['--tag' => 'darory-api-routes', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'darory-middleware', '--force' => true]);
 
         // $this->callSilent('vendor:publish', ['--tag' => 'darory-stubs', '--force' => true]);
 
