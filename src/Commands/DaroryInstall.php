@@ -31,6 +31,12 @@ class DaroryInstall extends Command
         exec('composer require intervention/image');
         $this->info('Installation complete.🎉');
 
+        //install package sanctam api
+        $this->info('Installing sanctum...');
+        exec('php artisan install:api');
+        $this->info('Installation complete.🎉');
+
+
         $this->info('✅ Darory assets published successfully!');
 
         $this->warn('⚠️  Make sure to register your package path in composer.json like:');
