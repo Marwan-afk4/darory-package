@@ -213,7 +213,7 @@ class DaroryRequests extends Command
             }
         }
 
-        $stubPath = app_path("Console/Commands/stubs/requests/$stubFile.stub");
+        $stubPath = base_path("vendor/darory/tools/src/stubs/requests/$stubFile.stub");
 
         if (!File::exists($stubPath)) {
             $this->error("Stub file not found: $stubFile");
