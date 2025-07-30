@@ -10,7 +10,6 @@ Route::get('/user', function (Request $request) {
 
 
 Route::name('api.')->group(function () {
-    Route::post('/register', [AuthenticationController::class, 'register'])->name('register');
     Route::post('/login', [AuthenticationController::class, 'login'])->name('login');
 
     Route::middleware('auth:sanctum')->group(function () {
